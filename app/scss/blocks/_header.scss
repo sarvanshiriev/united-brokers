@@ -1,0 +1,338 @@
+.header {
+  min-width: $mobile-width;
+  padding: 20px $padding-mobile;
+  margin: 0 auto;
+  position: relative;
+  position: fixed;
+  background-color: $Main;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  @media (min-width: $tablet-width) {
+    min-width: $tablet-width;
+    padding: 20px $padding-tablet;
+  }
+  @media (min-width: $laptop-width) {
+    min-width: $laptop-width;
+    padding: 25px $padding-laptop;
+    display: flex;
+    align-items: center;
+  }
+  @media (min-width: $desktop-width) {
+    min-width: $desktop-width;
+    padding: 25px $padding-desktop;
+  }
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 25px 0px rgba(5, 25, 25, 0.08);
+  pointer-events: none;
+}
+
+.logo-container {
+  position: relative;
+  overflow: hidden;
+}
+.hidden-text {
+  position: absolute;
+  bottom: -20px;
+  left: 45px;
+  font-size: 20px;
+  font-family: $Inter;
+  line-height: 20px;
+  font-weight: 800;
+  text-align: left;
+  letter-spacing: 0em;
+  color: $Main;
+  transition: transform 0.3s ease;
+  transform: translateY(0);
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  @media (min-width: $laptop-width) {
+    margin: 0;
+  }
+}
+.header__navigation {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding: 20px $padding-mobile 80px $padding-mobile;
+  @media (min-width: $laptop-width) {
+    position: relative;
+    margin-top: 0px;
+    padding: 0;
+    width: auto;
+    margin-right: auto;
+  }
+}
+.header__navigation--closed {
+  display: none;
+  @media (min-width: $laptop-width) {
+    display: block;
+  }
+}
+.header__navigation--opened {
+  display: block;
+}
+.header__menu {
+  font-family: $Inter;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $White;
+}
+.header__menu--closed {
+  display: none;
+  @media (min-width: $laptop-width) {
+    display: none;
+  }
+}
+.header__menu--opened {
+  display: block;
+  @media (min-width: $laptop-width) {
+    display: none;
+  }
+}
+.header__logo img {
+  vertical-align: middle;
+}
+
+.header__toggle {
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: $Main;
+  @media (min-width: $laptop-width) {
+    display: none;
+  }
+}
+
+.header__toggle--closed .header__toggle-burger {
+  position: relative;
+  width: 25px;
+  height: 2px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: $White;
+  transition: 0.2s;
+  display: block;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $White;
+    left: 0;
+  }
+
+  &::before {
+    top: 8px;
+  }
+
+  &::after {
+    top: -8px;
+  }
+}
+.header__toggle--opened .header__toggle-burger {
+  background-color: transparent;
+  position: relative;
+  width: 22px;
+  height: 2px;
+  transition: 0.2s;
+  display: block;
+  margin: 0 auto;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background-color: $White;
+    left: 0;
+  }
+  &::before {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    top: 0;
+    transform: rotate(45deg);
+  }
+}
+.header__navigation-list {
+  @media (min-width: $laptop-width) {
+    display: flex;
+  }
+}
+.header__navigation-item:not(:last-child) {
+  width: 342px;
+  @media (min-width: $laptop-width) {
+    width: auto;
+    margin-right: 60px;
+  }
+  @media (min-width: $desktop-width) {
+    width: auto;
+    margin-right: 92px;
+  }
+}
+
+.header__navigation-item-button {
+  background-color: $Main;
+  text-align: center;
+  padding-left: 0;
+  border-radius: 4px;
+  margin: 40px 0;
+  width: 342px;
+  @media (min-width: $tablet-width) {
+    width: 100px;
+  }
+  @media (min-width: $laptop-width) {
+    margin: 0;
+  }
+}
+.header__navigation-link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: $Inter;
+  color: $White;
+  @media (min-width: $laptop-width) {
+    font-size: 20px;
+  }
+}
+.header__navigation-link:hover {
+  color: $Hover;
+}
+.header__navigation-link:focus {
+  color: $Main;
+  background-color: $Hover;
+}
+.header__navigation-link-button {
+  color: $White;
+  padding-left: 0;
+  width: 342px;
+  @media (min-width: $tablet-width) {
+    width: 100px;
+  }
+  @media (min-width: $laptop-width) {
+    width: auto;
+    padding: 14px 0;
+    font-size: 14px;
+  }
+}
+
+.header__social-list {
+  display: flex;
+  @media (min-width: $laptop-width) {
+    display: none;
+  }
+}
+.header__social-link {
+  width: 48px;
+  height: 48px;
+  box-shadow: 0px 0px 20px 0px rgba(13, 64, 64, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: 16px;
+}
+
+.header__navigation-enter {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: auto;
+  @media (min-width: $laptop-width) {
+    margin-left: 0;
+  }
+}
+
+.header__navigation-link-en {
+  display: none;
+}
+
+.header__logo-image {
+  width: 55px;
+  height: 56px;
+  @media (min-width: $tablet-width) {
+    width: 63px;
+    height: 64px;
+  }
+  @media (min-width: $laptop-width) {
+    width: 100px;
+    height: 102px;
+    margin-right: 70px;
+  }
+}
+
+.header__navigation-link-ru {
+  display: none;
+  @media (min-width: $laptop-width) {
+    font-family: $Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: $White;
+    padding: 6px 12px 5px;
+    display: block;
+    border: 1.5px solid transparent;
+  }
+}
+
+.header__navigation-link-ru:hover {
+  border-radius: 3px;
+  border: 1.5px solid $White;
+  color: $White;
+  border-radius: 4px;
+  padding: 6px 12px 5px;
+  background-color: transparent;
+}
+
+.header__navigation-link-ru:focus {
+  background-color: transparent;
+  color: $White;
+}
+
+.header__navigation-link-enter {
+  font-family: $Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: $White;
+  padding: 11px 16px;
+  border-radius: 3px;
+  border: 1.5px solid $White;
+  @media (min-width: $tablet-width) {
+    padding: 11px 26px;
+  }
+  @media (min-width: $laptop-width) {
+    padding: 14px 26px;
+  }
+}
+
+.header__navigation-link-enter:hover {
+  color: $White;
+}
+
+.header__navigation-item-lang {
+  margin-right: 40px;
+}
