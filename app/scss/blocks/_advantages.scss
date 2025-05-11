@@ -1,6 +1,16 @@
 .advantages {
   padding: 56px $padding-mobile;
   background-color: $Gray;
+  @media (min-width: $tablet-width) {
+    padding: 111px $padding-tablet;
+    overflow: hidden;
+  }
+  @media (min-width: $laptop-width) {
+    padding: 150px $padding-laptop;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 150px $padding-laptop;
+  }
 }
 
 .advantages__title {
@@ -36,6 +46,7 @@
     transition: none;
     max-width: none;
     transform: none !important;
+    margin-bottom: 0;
   }
   @media (min-width: $laptop-width) {
     grid-template-columns: 1fr 1fr 1fr;

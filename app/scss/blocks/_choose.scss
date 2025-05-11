@@ -1,0 +1,128 @@
+.choose {
+  padding: 56px $padding-mobile;
+  @media (min-width: $tablet-width) {
+    padding: 56px $padding-tablet;
+    overflow: hidden;
+  }
+  @media (min-width: $laptop-width) {
+    padding: 150px $padding-laptop;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 150px $padding-laptop;
+  }
+}
+
+.choose__head {
+  @media (min-width: $tablet-width) {
+    margin-right: 50px;
+  }
+  @media (min-width: $laptop-width) {
+    width: 500px;
+  }
+}
+
+.choose__container {
+  width: 100%;
+  overflow: hidden;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 522px;
+    margin: 0 auto;
+    overflow: visible;
+  }
+  @media (min-width: $laptop-width) {
+    max-width: 100%;
+    justify-content: space-between;
+    max-width: 1395px;
+  }
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+  }
+}
+
+.choose__title {
+  font-family: $Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $Text;
+  margin-bottom: 8px;
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 5px;
+  }
+  @media (min-width: $laptop-width) {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 24px;
+  }
+}
+
+.choose__subtitle {
+  font-family: $Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $Text;
+  margin-bottom: 20px;
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 9px;
+  }
+  @media (min-width: $laptop-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 32px;
+  }
+}
+
+.choose__wrapper {
+  width: 502px;
+  height: 276px;
+  margin: 33px auto 0 auto;
+  @media (min-width: $tablet-width) {
+    width: 502px;
+    height: 276px;
+    margin-right: -300px;
+    margin-top: 0;
+  }
+  @media (min-width: $laptop-width) {
+    width: 601px;
+    height: 358px;
+    margin: 0;
+  }
+  @media (min-width: $desktop-width) {
+    width: 782px;
+    height: 430px;
+  }
+}
+
+.choose__picture {
+  width: 502px;
+  height: 276px;
+  @media (min-width: $tablet-width) {
+    width: 502px;
+    height: 276px;
+  }
+  @media (min-width: $laptop-width) {
+    width: 601px;
+    height: 358px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 782px;
+    height: 430px;
+  }
+}
