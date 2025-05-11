@@ -47,15 +47,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     max-width: 522px;
     margin: 0 auto;
   }
   @media (min-width: $laptop-width) {
     max-width: 100%;
+    justify-content: space-between;
+    max-width: 1395px;
   }
   @media (min-width: $desktop-width) {
-    max-width: 1395px;
     margin: 0 auto;
   }
 }
@@ -119,11 +119,13 @@
   @media (min-width: $tablet-width) {
     width: 250px;
     height: 252px;
-    margin: 0;
+    margin-right: -60px;
+    margin-top: 0;
   }
   @media (min-width: $laptop-width) {
     width: 500px;
     height: 504px;
+    margin: 0;
   }
   @media (min-width: $desktop-width) {
     width: 546px;
