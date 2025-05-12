@@ -87,7 +87,7 @@
     left: 13px;
     content: '';
     transform: rotate(90deg) translateY(9px);
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
     @media (min-width: $tablet-width) {
         width: 18px;
@@ -95,7 +95,7 @@
     }
 }
 .faq__item-link.rotate::before {
-    opacity: 1;
+    opacity: 0;
   }
 
 .faq__item:not(:last-child) {
