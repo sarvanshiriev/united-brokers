@@ -25,6 +25,7 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify-es": "^3.0.0",
     "gulp-webp": "^4.0.1",
+    "prettier": "^3.5.3",
     "sass": "^1.66.1",
     "webpack-stream": "^7.0.0"
   },
