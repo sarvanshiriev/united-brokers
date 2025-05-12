@@ -132,6 +132,7 @@
     text-align: left;
     color: $Text;
     margin-top: 10px;
+    display: none;
     @media (min-width: $tablet-width) {
       font-size: 14px;
       line-height: 28px;
