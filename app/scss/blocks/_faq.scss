@@ -135,10 +135,17 @@
     @media (min-width: $tablet-width) {
       font-size: 14px;
       line-height: 28px;
-      margin-top: 40px;
+      margin-top: 30px;
     }
     @media (min-width: $laptop-width) {
       font-size: 16px;
       line-height: 16px;
     }
+}
+
+.faq__list {
+  margin-bottom: 20px;
+  @media (min-width: $laptop-width) {
+    margin-bottom: 30px;
+  }
 }

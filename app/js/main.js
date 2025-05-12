@@ -2,3 +2,4 @@
 import "./faq.js";
 import "./burger.js";
 import "./advantages.js";
+import "./footer.js";
